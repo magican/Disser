@@ -1,4 +1,4 @@
 Disser
 ======
 
-Dissertation in latex
+PhD thesis in latex
