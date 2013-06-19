@@ -1,0 +1,10 @@
+% Добавляем список литературы в оглавление
+% http://stackoverflow.com/questions/782187/latex-table-of-contents-links-to-wrong-section
+\phantomsection
+\addcontentsline{toc}{chapter}{\bibname}
+% Подключаем BibTeX-базы
+\bibliography{bibs/mag_publications,bibs/disser_publications}
+%\bibliography{bibs/ref,bibs/akimov,bibs/mag_publications,bibs/disser_publications}
+%\bibliography{biblio}
+\newpage
+\clearpage

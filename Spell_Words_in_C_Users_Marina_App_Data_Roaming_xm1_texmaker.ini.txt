@@ -1,0 +1,3 @@
+Spell\Words=" in
+C:\Users\Marina\AppData\Roaming\xm1
+copy it to settings file for other computers or save a new "settings file"

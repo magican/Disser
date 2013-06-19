@@ -1,0 +1,25 @@
+\documentclass[a4paper,12pt]{report}
+%\documentclass[a4paper,14pt]{extreport} % report style doesn't support 14pt font
+
+\input{configs/packages}		% Подключаемые пакеты
+\input{configs/styles}		% Пользовательские стили
+
+\begin{document}
+
+\listoftodos
+\todototoc
+
+\input{configs/names}	% Переопределение именований
+
+%\input{1.title}		% Титульный лист
+\input{2.contents}		% Оглавлениеf
+%\input{3.introduction}	% Введение
+\input{4.chap1}			% Глава 1
+\input{4.chap2}			% Глава 2
+%\input{4.chap3}			% Глава 3
+%\input{5.conclusion}	% Заключение
+%\input{6.lists}			% Списки таблиц и изображений
+\input{7.references}	% Список литературы
+%\input{8.appendix}		% Приложения
+
+\end{document}
