@@ -5,16 +5,11 @@
 \chapter{Основные соотношения модели RIM} \label{AppendixA}
 
 
-\todo{нумерация формул}
-
-
-
-
 Спектр ветрового волнения является фундаментальной характеристикой морской поверхности. Для решения поставленных в данной работе задач, нам необходима физическая модель спектра, которая основана на решении уравнения баланса энергии, которое удобней использовать в терминах волнового спектра действия (см., например, \citep{Phillips1977}):
 
 
 
-\begin{equation} \label{1.29)} \frac{\partial N(k)}{\partial t} +\left(c_{gi}^{} +u_{i}^{} \right)\frac{\partial N(k)}{\partial x_{i}^{} } -k_{j}^{} \frac{\partial u_{j}^{} }{\partial x_{i}^{} } \frac{\partial N(k)}{\partial k_{i}^{} } =Q(k)/\omega , \end{equation} 
+\begin{equation} \label{eq:A.1} \frac{\partial N(k)}{\partial t} +\left(c_{gi}^{} +u_{i}^{} \right)\frac{\partial N(k)}{\partial x_{i}^{} } -k_{j}^{} \frac{\partial u_{j}^{} }{\partial x_{i}^{} } \frac{\partial N(k)}{\partial k_{i}^{} } =Q(k)/\omega , \end{equation} 
 
 
 
@@ -22,7 +17,7 @@
 
 
 
-\begin{equation} \label{1.30)} \omega _{}^{2} =gk+\gamma k_{}^{3} , \end{equation} 
+\begin{equation} \label{eq:A.2} \omega _{}^{2} =gk+\gamma k_{}^{3} , \end{equation} 
 
 
 
@@ -32,7 +27,7 @@
 
 
 
-\begin{equation} \label{1.31)} Q(k)=\beta _{\nu } (k)\omega E(k)-D(k)-Q^{nl} (k)+Q^{wb} (k), \end{equation} 
+\begin{equation} \label{eq:A.3} Q(k)=\beta _{\nu } (k)\omega E(k)-D(k)-Q^{nl} (k)+Q^{wb} (k), \end{equation} 
 
 
 
@@ -40,7 +35,7 @@
 
 
 
-\begin{equation} \label{1.32)} \beta (k)=C_{\beta } (u_{*} /c)^{2} \cos \varphi |\cos \varphi |, \end{equation} 
+\begin{equation} \label{eq:A.4} \beta (k)=C_{\beta } (u_{*} /c)^{2} \cos \varphi |\cos \varphi |, \end{equation} 
 
 
 
@@ -60,7 +55,7 @@
 
 
 
-\begin{equation} \label{1.33)} D(k)=bg^{-1} c^{5} \Lambda (k), \end{equation} 
+\begin{equation} \label{eq:A.5} D(k)=bg^{-1} c^{5} \Lambda (k), \end{equation} 
 
 
 
@@ -72,7 +67,7 @@
 
 
 
-\begin{equation} \label{1.34)} \begin{array}{l} {Q_{pc}^{wb} (k)\equiv \omega ^{3} k^{-5} I_{pc} (k)} \\ {I_{pc} (k)=bk_{g}^{-1} \Lambda (k_{g} )\phi (k/k_{\gamma } ),} \end{array} \end{equation} 
+\begin{equation} \label{eq:A.6} \begin{array}{l} {Q_{pc}^{wb} (k)\equiv \omega ^{3} k^{-5} I_{pc} (k)} \\ {I_{pc} (k)=bk_{g}^{-1} \Lambda (k_{g} )\phi (k/k_{\gamma } ),} \end{array} \end{equation} 
 
 
 
@@ -82,7 +77,7 @@
 
 
 
-\begin{equation} \label{1.35)} \begin{array}{l} {Q_{sw}^{wb} (k)\equiv \omega ^{3} k^{-5} I_{sw} (k)} \\ {I_{sw} (k)=c_{b} \omega ^{-1} \int _{0}^{k_{m} }\omega k^{-1} \Lambda (k')dk' ,} \end{array} \end{equation} 
+\begin{equation} \label{eq:A.7} \begin{array}{l} {Q_{sw}^{wb} (k)\equiv \omega ^{3} k^{-5} I_{sw} (k)} \\ {I_{sw} (k)=c_{b} \omega ^{-1} \int _{0}^{k_{m} }\omega k^{-1} \Lambda (k')dk' ,} \end{array} \end{equation} 
 
 
 
@@ -104,15 +99,15 @@
 
 
 
-\begin{equation} \label{1.36)} z\left(x,t\right)=\int \widehat{z}\left(K\right) \exp \left(i\left(K\cdot x-\Omega t\right)\right)dK,  \end{equation} 
+\begin{equation} \label{eq:A.8} z\left(x,t\right)=\int \widehat{z}\left(K\right) \exp \left(i\left(K\cdot x-\Omega t\right)\right)dK,  \end{equation}
 
 
 
-\noindent где $z\left(x,t\right)$ -- произвольная константа, $\widehat{z}\left(K\right)$ -- её Фурье амплитуда (комплексная переменная), а $K$ и $\Omega $ -- вектор волнового числа и частота, соответственно. Тогда линеаризованное решение уравнения баланса действия \eqref{ZEqnNum858310} с разложением на Фурье гармоники для малых вариаций спектра, вызванных поверхностным течением и приповерхностным ветром, выглядит следующим образом \citep{Kudryavtsev2005}:
+\noindent где $z\left(x,t\right)$ -- произвольная константа, $\widehat{z}\left(K\right)$ -- её Фурье амплитуда (комплексная переменная), а $K$ и $\Omega $ -- вектор волнового числа и частота, соответственно. Тогда линеаризованное решение уравнения баланса действия \eqref{eq:A.1} с разложением на Фурье гармоники для малых вариаций спектра, вызванных поверхностным течением и приповерхностным ветром, выглядит следующим образом \citep{Kudryavtsev2005}:
 
 
 
-\begin{equation} \label{1.37)} T\left(k,K\right)=\frac{\tau }{1+i\cdot r} \left[\omega ^{-1} m_{k}^{ij} \widehat{u}_{ij} +\widehat{\beta }+{\left(\widehat{I}_{sw} +\widehat{I}_{pc} \right)\mathord{\left/ {\vphantom {\left(\widehat{I}_{sw} +\widehat{I}_{pc} \right) B}} \right. \kern-\nulldelimiterspace} B} \right],  \end{equation} 
+\begin{equation} \label{eq:A.9} T\left(k,K\right)=\frac{\tau }{1+i\cdot r} \left[\omega ^{-1} m_{k}^{ij} \widehat{u}_{ij} +\widehat{\beta }+{\left(\widehat{I}_{sw} +\widehat{I}_{pc} \right)\mathord{\left/ {\vphantom {\left(\widehat{I}_{sw} +\widehat{I}_{pc} \right) B}} \right. \kern-\nulldelimiterspace} B} \right],  \end{equation} 
 
 
 
@@ -120,39 +115,39 @@
 
 
 
-\begin{equation} \label{1.38)} r=\tau \omega ^{-1} \left(c_{gj} K_{j} -\Omega \right),  \end{equation} 
+\begin{equation} \label{eq:A.10} r=\tau \omega ^{-1} \left(c_{gj} K_{j} -\Omega \right),  \end{equation} 
 
 
 
-$m_{k}^{ij} =k_{j} {\partial \left(\ln N_{0} \right)\mathord{\left/ {\vphantom {\partial \left(\ln N_{0} \right) \partial k_{i} }} \right. \kern-\nulldelimiterspace} \partial k_{i} } $ -- тензор нормированного градиента спектра по волновым числам, $\widehat{u}_{ij} $ -- Фурье амплитуда тензора градиента скорости течения ${\partial u_{i} \mathord{\left/ {\vphantom {\partial u_{i}  \partial x_{j} }} \right. \kern-\nulldelimiterspace} \partial x_{j} } $. Оператор $m_{k}^{ij} \widehat{u}_{ij} $ в \eqref{ZEqnNum567066} можно представить в виде:
+$m_{k}^{ij} =k_{j} {\partial \left(\ln N_{0} \right)\mathord{\left/ {\vphantom {\partial \left(\ln N_{0} \right) \partial k_{i} }} \right. \kern-\nulldelimiterspace} \partial k_{i} } $ -- тензор нормированного градиента спектра по волновым числам, $\widehat{u}_{ij} $ -- Фурье амплитуда тензора градиента скорости течения ${\partial u_{i} \mathord{\left/ {\vphantom {\partial u_{i}  \partial x_{j} }} \right. \kern-\nulldelimiterspace} \partial x_{j} } $. Оператор $m_{k}^{ij} \widehat{u}_{ij} $ в \eqref{eq:A.9} можно представить в виде:
 
 
 
-\begin{equation} \label{1.39)} \begin{array}{l} {m_{k}^{ij} \widehat{u}_{ij} =m_{k} \left(\cos ^{2} \phi \cdot \widehat{u}_{ij} -\cos 2\phi \cdot \widehat{u}_{2,2} \right)+} \\ {\qquad \, \, \, \, {1\mathord{\left/ {\vphantom {1 2}} \right. \kern-\nulldelimiterspace} 2} m_{\phi } \sin 2\phi \cdot \left(\widehat{u}_{2,2} -\widehat{u}_{1,1} \right)+} \\ {\qquad \, \, \, \, {1\mathord{\left/ {\vphantom {1 2}} \right. \kern-\nulldelimiterspace} 2} m_{k} \sin 2\phi \cdot \left(\widehat{u}_{2,1} -\widehat{u}_{1,2} \right)-} \\ {\qquad \, \, \, \, m_{\phi } \left(\sin ^{2} \phi \cdot \widehat{u}_{2,1} -\cos ^{2} \phi \cdot \widehat{u}_{1,2} \right)} \end{array},  \end{equation} 
+\begin{equation} \label{eq:A.11} \begin{array}{l} {m_{k}^{ij} \widehat{u}_{ij} =m_{k} \left(\cos ^{2} \phi \cdot \widehat{u}_{ij} -\cos 2\phi \cdot \widehat{u}_{2,2} \right)+} \\ {\qquad \, \, \, \, {1\mathord{\left/ {\vphantom {1 2}} \right. \kern-\nulldelimiterspace} 2} m_{\phi } \sin 2\phi \cdot \left(\widehat{u}_{2,2} -\widehat{u}_{1,1} \right)+} \\ {\qquad \, \, \, \, {1\mathord{\left/ {\vphantom {1 2}} \right. \kern-\nulldelimiterspace} 2} m_{k} \sin 2\phi \cdot \left(\widehat{u}_{2,1} -\widehat{u}_{1,2} \right)-} \\ {\qquad \, \, \, \, m_{\phi } \left(\sin ^{2} \phi \cdot \widehat{u}_{2,1} -\cos ^{2} \phi \cdot \widehat{u}_{1,2} \right)} \end{array},  \end{equation} 
 
 
 
 \noindent где $m_{k} ={\partial \left(\ln N\right)\mathord{\left/ {\vphantom {\partial \left(\ln N\right) \partial \left(\ln k\right)}} \right. \kern-\nulldelimiterspace} \partial \left(\ln k\right)} $, $m_{\phi } ={\partial \left(\ln N\right)\mathord{\left/ {\vphantom {\partial \left(\ln N\right) \partial \phi }} \right. \kern-\nulldelimiterspace} \partial \phi } $, $\phi $ -- направление вектора волнового числа.
 
-Члены $\widehat{I}_{sw} $ и $\widehat{I}_{pc} $ в \eqref{ZEqnNum567066} описывают эффект модуляции обрушений волн на коротких ветровых волнах и паразитных капиллярах.
+Члены $\widehat{I}_{sw} $ и $\widehat{I}_{pc} $ в \eqref{eq:A.9} описывают эффект модуляции обрушений волн на коротких ветровых волнах и паразитных капиллярах.
 
-Второй член в уравнении \eqref{ZEqnNum567066} описывает эффект влияния изменения скорости ветра на спектр волн. В частности, вариации скорости ветра могут возникать в результате трансформации атмосферного погранслоя над изменяющимся температурным фронтом в море. Также стоит отметить, что уравнение \eqref{ZEqnNum567066} описывает и модуляцию коротких волн более длинными поверхностными волнами, как например описывается в \citep{Kudryavtsev2003}.
+Второй член в уравнении \eqref{eq:A.9} описывает эффект влияния изменения скорости ветра на спектр волн. В частности, вариации скорости ветра могут возникать в результате трансформации атмосферного погранслоя над изменяющимся температурным фронтом в море. Также стоит отметить, что уравнение \eqref{eq:A.9} описывает и модуляцию коротких волн более длинными поверхностными волнами, как например описывается в \citep{Kudryavtsev2003}.
 
-Уравнение \eqref{ZEqnNum567066} представляет собой интегральное уравнение Фредгольма второго рода. Такое уравнение решаемо численными методами, итерационно. Тем не менее, сначала рассмотрим некоторые граничные случаи (для стационарных течений, $\Omega =0$), иллюстрирующие некоторые характеристические свойства полного решения.
+Уравнение \eqref{eq:A.9} представляет собой интегральное уравнение Фредгольма второго рода. Такое уравнение решаемо численными методами, итерационно. Тем не менее, сначала рассмотрим некоторые граничные случаи (для стационарных течений, $\Omega =0$), иллюстрирующие некоторые характеристические свойства полного решения.
 
-В случае если параметр $r$ велик, поверхностные изменения пространственного масштаба малы, по сравнению с релаксационным масштабом $l_{r} $. Это наиболее вероятно для длинных гравитационных волн. Для $r\gg 1$ \eqref{ZEqnNum567066} сокращается до:
-
-
-
-\begin{equation} \label{1.40)} T\left(k,K\right)=\frac{m_{k}^{ij} K_{j} \widehat{u}_{i} }{c_{gj} K_{j} } \propto -\frac{7}{2} \frac{V}{c_{g} } ,  \end{equation} 
+В случае если параметр $r$ велик, поверхностные изменения пространственного масштаба малы, по сравнению с релаксационным масштабом $l_{r} $. Это наиболее вероятно для длинных гравитационных волн. Для $r\gg 1$ \eqref{eq:A.9} сокращается до:
 
 
 
-\noindent где $V$ -- величина поверхностного течения. Это уравнение представляет трансформацию, когда поверхностные волны взаимодействуют с течением, как свободные волны и не чувствуют влияния ветра или других источников энергии. В таком случае, чем длиннее (и быстрее распространяются) поверхностные волны, тем меньше влияние поверхностного течения. Можно показать, что второй и третий член в уравнении \eqref{ZEqnNum567066} имеет порядок $r^{-1} {\widehat{u_{*} }\mathord{\left/ {\vphantom {\widehat{u_{*} } u_{*} }} \right. \kern-\nulldelimiterspace} u_{*} } $ и $r^{-1} {V\mathord{\left/ {\vphantom {V c_{g} }} \right. \kern-\nulldelimiterspace} c_{g} } $, соответственно, и их можно опустить при $r\gg 1$.
+\begin{equation} \label{eq:A.12} T\left(k,K\right)=\frac{m_{k}^{ij} K_{j} \widehat{u}_{i} }{c_{gj} K_{j} } \propto -\frac{7}{2} \frac{V}{c_{g} } ,  \end{equation} 
 
-Условие, когда $r\ll 1$, выполняется для коротких ветровых волн. Здесь влияние течения пренебрежимо мало (первый член в \eqref{ZEqnNum567066} можно опустить). Вариации спектра возникают в результате локального влияния ветра и обрушений волн. Когда источником вариаций коротких волн является только ветер, \eqref{ZEqnNum567066} сокращается до:
 
-\begin{equation} \label{1.41)} T\left(k,K\right)\approx m_{*} \frac{\widehat{u_{*} }}{u_{*} } ,  \end{equation} 
+
+\noindent где $V$ -- величина поверхностного течения. Это уравнение представляет трансформацию, когда поверхностные волны взаимодействуют с течением, как свободные волны и не чувствуют влияния ветра или других источников энергии. В таком случае, чем длиннее (и быстрее распространяются) поверхностные волны, тем меньше влияние поверхностного течения. Можно показать, что второй и третий член в уравнении \eqref{eq:A.9} имеет порядок $r^{-1} {\widehat{u_{*} }\mathord{\left/ {\vphantom {\widehat{u_{*} } u_{*} }} \right. \kern-\nulldelimiterspace} u_{*} } $ и $r^{-1} {V\mathord{\left/ {\vphantom {V c_{g} }} \right. \kern-\nulldelimiterspace} c_{g} } $, соответственно, и их можно опустить при $r\gg 1$.
+
+Условие, когда $r\ll 1$, выполняется для коротких ветровых волн. Здесь влияние течения пренебрежимо мало (первый член в \eqref{eq:A.9} можно опустить). Вариации спектра возникают в результате локального влияния ветра и обрушений волн. Когда источником вариаций коротких волн является только ветер, \eqref{eq:A.9} сокращается до:
+
+\begin{equation} \label{eq:A.13} T\left(k,K\right)\approx m_{*} \frac{\widehat{u_{*} }}{u_{*} } ,  \end{equation} 
 
 
 
@@ -160,17 +155,17 @@ $m_{k}^{ij} =k_{j} {\partial \left(\ln N_{0} \right)\mathord{\left/ {\vphantom {
 
 
 
-\begin{equation} \label{1.42)} T\left(k\right)\approx m_{k} \frac{n_{g} +1}{n_{g} } \ln \left[\frac{k}{a_{b} k_{p} } \right]\tau \omega ^{-1} \widehat{u}_{ij} ,  \end{equation} 
+\begin{equation} \label{eq:A.14} T\left(k\right)\approx m_{k} \frac{n_{g} +1}{n_{g} } \ln \left[\frac{k}{a_{b} k_{p} } \right]\tau \omega ^{-1} \widehat{u}_{ij} ,  \end{equation} 
 
 
 
-\noindent где $a_{b} =10$. Чтобы вывести это уравнение, учитывался лишь первый член оператора в уравнении \eqref{ZEqnNum735720}, дающий вклад в интеграл по $\phi $. В уравнении \eqref{ZEqnNum538621} есть две отличительные особенности. Во первых -- только дивергенция поверхностного течения влияет на модуляцию коротких ветровых волн. А во вторых -- модуляция сильнее при боковом ветре, поскольку $\tau $ имеет угловую зависимость (подробнее см. \citep{Kudryavtsev2005}). Последнее утверждение предполагает, что эффект поверхностного течения приводит к анизотропии коротких ветровых волн. Проведя модельные расчёты контрастов спектра брэгговских волновых чисел для разных направлений ветра (Рисунок~34), отчётливо видно, что для бокового ветра вариации контрастов значительно выше, а для направлений против и по ветру -- они минимальны. 
+\noindent где $a_{b} =10$. Чтобы вывести это уравнение, учитывался лишь первый член оператора в уравнении \eqref{eq:A.11}, дающий вклад в интеграл по $\phi $. В уравнении \eqref{eq:A.14} есть две отличительные особенности. Во первых -- только дивергенция поверхностного течения влияет на модуляцию коротких ветровых волн. А во вторых -- модуляция сильнее при боковом ветре, поскольку $\tau $ имеет угловую зависимость (подробнее см. \citep{Kudryavtsev2005}). Последнее утверждение предполагает, что эффект поверхностного течения приводит к анизотропии коротких ветровых волн. Проведя модельные расчёты контрастов спектра брэгговских волновых чисел для разных направлений ветра (Рисунок~34), отчётливо видно, что для бокового ветра вариации контрастов значительно выше, а для направлений против и по ветру -- они минимальны. 
 
-В \eqref{ZEqnNum567066} заведомо не был включён член, описывающий влияние поверхностных плёнок, которые могут значительно изменять коэффициент вязкой диссипации, и, таким образом, влияют на спектр волн (см., например, \citep{Ermakov1992}). Этот механизм локализован в пространстве волновых чисел и в основном влияет на самые короткие ветровые волны, чья скорость релаксации очень велика. Поэтому можно предположить, что плёнки влияют на коротки волны локализовано в физическом пространстве и их вклад возможно учесть через изменённый коэффициент вязкости в фоновом спектре $N_{0} \left(k\right)$. Таким образом, вариации спектра насыщения волн в физическом пространстве принимают следующий вид:
+В \eqref{eq:A.9} заведомо не был включён член, описывающий влияние поверхностных плёнок, которые могут значительно изменять коэффициент вязкой диссипации, и, таким образом, влияют на спектр волн (см., например, \citep{Ermakov1992}). Этот механизм локализован в пространстве волновых чисел и в основном влияет на самые короткие ветровые волны, чья скорость релаксации очень велика. Поэтому можно предположить, что плёнки влияют на коротки волны локализовано в физическом пространстве и их вклад возможно учесть через изменённый коэффициент вязкости в фоновом спектре $N_{0} \left(k\right)$. Таким образом, вариации спектра насыщения волн в физическом пространстве принимают следующий вид:
 
 
 
-\begin{equation} \label{1.43)} B\left(k\right)=B_{0} \left(k\right)\left[1+\int T(k,K)e^{i\left(K\cdot x-\Omega t\right)} dK \right],  \end{equation} 
+\begin{equation} \label{eq:A.15} B\left(k\right)=B_{0} \left(k\right)\left[1+\int T(k,K)e^{i\left(K\cdot x-\Omega t\right)} dK \right],  \end{equation} 
 
 
 
@@ -180,7 +175,7 @@ $m_{k}^{ij} =k_{j} {\partial \left(\ln N_{0} \right)\mathord{\left/ {\vphantom {
 
 \section{Трансформация СКН и обрушений волн} \label{AppendixA2}
 
-Для создания полной модели, необходимо количественно оценить спектр волн, а также его трансформации в присутствии пространственно-неоднородных течений, переменного ветра и поверхностно-активных веществ (ПАВ), которые приводят к проявлению особенностей поверхностных течений на радиолокационных (РЛ) изображениях. Используя спектральную передаточную функцию \eqref{ZEqnNum567066}, получим вариации компонентов СКН $\Delta s_{^{j} }^{2} $ в неоднородной среде \citep{Kudryavtsev2005}:
+Для создания полной модели, необходимо количественно оценить спектр волн, а также его трансформации в присутствии пространственно-неоднородных течений, переменного ветра и поверхностно-активных веществ (ПАВ), которые приводят к проявлению особенностей поверхностных течений на радиолокационных (РЛ) изображениях. Используя спектральную передаточную функцию \eqref{eq:A.9}, получим вариации компонентов СКН $\Delta s_{^{j} }^{2} $ в неоднородной среде \citep{Kudryavtsev2005}:
 
 
 
@@ -188,7 +183,7 @@ $m_{k}^{ij} =k_{j} {\partial \left(\ln N_{0} \right)\mathord{\left/ {\vphantom {
 
 
 
-\noindent где нижний индекс ``0'' означает, что СКН относится к фоновому спектру $B_{0} \left(k\right)$ в \eqref{ZEqnNum419022}, $\kappa _{j}^{2} ={k_{j} \mathord{\left/ {\vphantom {k_{j}  k}} \right. \kern-\nulldelimiterspace} k} $ -- единичный вектор волнового числа, а индекс $j=1,2$.
+\noindent где нижний индекс ``0'' означает, что СКН относится к фоновому спектру $B_{0} \left(k\right)$ в \eqref{eq:A.15}, $\kappa _{j}^{2} ={k_{j} \mathord{\left/ {\vphantom {k_{j}  k}} \right. \kern-\nulldelimiterspace} k} $ -- единичный вектор волнового числа, а индекс $j=1,2$.
 
 Область моря, покрытая обрушениями рассчитывается исходя из:
 

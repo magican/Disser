@@ -4,6 +4,6 @@ sudo apt-get installtexlive-full texmaker
 
 Gentoo
 
-eix-sync; emerge -pv dev-texlive/texlive-langcyrillic dev-texlive/texlive-latexextra --autounmask-write =app-office/texmaker-4.1; dispatch-conf
+eix-sync; emerge -av dev-texlive/texlive-langcyrillic dev-texlive/texlive-latexextra --autounmask-write =app-office/texmaker-4.1; dispatch-conf
 
 cp /home/mag/Documents/АСПИРАНТУРА/Disser\ Docs/Disser/ru_RU.* /usr/share/texmaker/
