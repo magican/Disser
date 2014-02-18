@@ -19,11 +19,11 @@
 
 %%% Библиография %%%
 \bibliographystyle{configs/ugost2008n}
-%\makeatletter
+\makeatletter
 %\bibliographystyle{configs/utf8gost705u}	% Оформляем библиографию в соответствии с ГОСТ 7.0.5
-%\renewcommand{\@biblabel}[1]{#1.}	% Заменяем библиографию с квадратных скобок на точку
-%\let\citep\cite 	%assign the functionality of \cite to \citep when not using natbib author-year citation with style ugost2008n
-%\makeatother
+\renewcommand{\@biblabel}[1]{#1.}	% Заменяем библиографию с квадратных скобок на точку
+\let\citep\cite 	%assign the functionality of \cite to \citep when not using natbib author-year citation with style ugost2008n
+\makeatother
 
 %%% Изображения %%%
 \graphicspath{{images/}} % Пути к изображениям
