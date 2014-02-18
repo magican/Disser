@@ -1,7 +1,15 @@
+
+<!-- saved from url=(0114)https://raw.github.com/AndreyAkinshin/Russian-Phd-LaTeX-Dissertation-Template/master/Dissertation/utf8gost705u.bst -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style id="clearly_highlighting_css" type="text/css">/* selection */ html.clearly_highlighting_enabled ::-moz-selection { background: rgba(246, 238, 150, 0.99); } html.clearly_highlighting_enabled ::selection { background: rgba(246, 238, 150, 0.99); } /* cursor */ html.clearly_highlighting_enabled {    /* cursor and hot-spot position -- requires a default cursor, after the URL one */    cursor: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--cursor.png") 14 16, text; } /* highlight tag */ em.clearly_highlight_element {    font-style: inherit !important; font-weight: inherit !important;    background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--yellow.png");    background-repeat: repeat-x; background-position: top left; background-size: 100% 100%; } /* the delete-buttons are positioned relative to this */ em.clearly_highlight_element.clearly_highlight_first { position: relative; } /* delete buttons */ em.clearly_highlight_element a.clearly_highlight_delete_element {    display: none; cursor: pointer;    padding: 0; margin: 0; line-height: 0;    position: absolute; width: 34px; height: 34px; left: -17px; top: -17px;    background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--delete-sprite.png"); background-repeat: no-repeat; background-position: 0px 0px; } em.clearly_highlight_element a.clearly_highlight_delete_element:hover { background-position: -34px 0px; } /* retina */ @media (min--moz-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {    em.clearly_highlight_element { background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--yellow@2x.png"); }    em.clearly_highlight_element a.clearly_highlight_delete_element { background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--delete-sprite@2x.png"); background-size: 68px 34px; } } </style><style type="text/css"></style><style>[touch-action="none"]{ -ms-touch-action: none; touch-action: none; }[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x; }[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y; }[touch-action="scroll"],[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }</style><style type="text/css"></style></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;">%% This bibliography style attempts
 %% to format bibliography according to
 %% GOST 7.0.5-2008 
 %%
-%% Package version - 0.1 beta
+%% Package version - 1.2
+%%
+%%version history
+%%1.0 базовая версия
+%%1.1 поправлена ошибка с полем page (при ненулевом numpages) из одной цифры (c. 319). Теперь - C. 319
+%%1.2 поправлен баг, решена проблема с bibentry. В конце каждой записи ставится пустая группа: {}. Строки 145--149 кода
 %%
 %% For the Ukrainian|English bibliographic entries
 %% you need to create field
@@ -9,9 +17,9 @@
 %% Default language is Russian.
 %% Field numpages for books must contain number of pages.
 %%
-%% See examples in test_utf8gost705u.pdf and samples.pdf
+%% See examples in test.pdf and samples.pdf
 %%
-%% You can send your questions and comments to e-mail: tex_support&lt;at&gt;uniyar.ac.ru
+%% You can send your questions and comments to e-mail: tex_support@uniyar.ac.ru
 %%
 
 ENTRY
@@ -136,6 +144,11 @@ FUNCTION {output.check}
 FUNCTION {fin.entry}
 { add.period$
   write$
+%% вставляем пустую группу в конце. вер.1.2 %%%%%%%%%%%%%%%%%%%%%%
+  after.sentence 'output.state :=
+  "{}"
+  write$
+%% конец вставки %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   newline$
 }
 
@@ -443,18 +456,18 @@ FUNCTION {bbl.iin}  %     { "\bblIn{}" }
       if$}
   if$
 }
-
+%% Поле page - номер страницы или диапазон, поле numpage - количество страниц
 FUNCTION {bbl.pages}    % { "\bblpp." }
 {  curlanguage "english" =
     {"pp."}
     { curlanguage "ukrainian" = curlanguage "russian" = or
-           {"{с.}"}
+           {"{C.}"} %%правлено
            {"language is not defined: " language  "pp." * * warning$ "pp."}
       if$}
   if$
 }
 
-FUNCTION {bbl.page}   %   { "\bblp."
+FUNCTION {bbl.page}   %   { "\bblp."  %
 {  curlanguage "english" =
     {"p."}
     { curlanguage "ukrainian" = curlanguage "russian" = or
@@ -843,7 +856,8 @@ FUNCTION {format.pages}%%%%Поправлено (P вместо pp и p вмес
     { "" }
     { pages multi.page.check
         { bbl.ppage pages n.dashify tie.connect }
-        { bbl.page pages tie.connect }
+%        { bbl.page pages tie.connect }   % поправлено 16.3.2012
+        { bbl.ppage pages tie.connect }   % поправлено 16.3.2012
       if$
     }
   if$
@@ -855,7 +869,7 @@ FUNCTION {format.pages.page}%%%%Поправлено (P вместо pp и p в�
       { "" }
       { numpages bbl.page tie.connect }
     if$}
-    { format.pages}
+    { format.pages}    
   if$
 }
 
@@ -1517,3 +1531,4 @@ EXECUTE {end.bib}
 
 %%
 %% End of file `utf8gost705u.bst'.
+</pre></body></html>
